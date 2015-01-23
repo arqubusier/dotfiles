@@ -13,3 +13,7 @@ export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 #export TIGCC=/usr/local/tigcc
 #export PATH=$PATH:$TIGCC/bin
 export EDITOR=vim
+INTELLIJ_DIR=/home/herman/intellij/bin
+if [ -d "$INTELLIJ_DIR" ]; then
+    export PATH=${PATH}:$INTELLIJ_DIR
+fi
