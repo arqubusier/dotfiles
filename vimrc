@@ -36,12 +36,8 @@ set autoindent
 " clipboard copy/paste
 nnoremap <M-c> "+y
 nnoremap <M-v> "+p
-<<<<<<< HEAD
 nnoremap <F2> :wa<cr>
-=======
-nnoremap <F2> :w<cr>
 nnoremap <F3> :source ~/.vimrc<cr>
->>>>>>> 8d642253ff396f7253b61be30ccc9c5cb571c445
 
 
 nnoremap ; :
