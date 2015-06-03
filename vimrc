@@ -36,7 +36,12 @@ set autoindent
 " clipboard copy/paste
 nnoremap <M-c> "+y
 nnoremap <M-v> "+p
+<<<<<<< HEAD
 nnoremap <F2> :wa<cr>
+=======
+nnoremap <F2> :w<cr>
+nnoremap <F3> :source ~/.vimrc<cr>
+>>>>>>> 8d642253ff396f7253b61be30ccc9c5cb571c445
 
 
 nnoremap ; :
@@ -61,17 +66,28 @@ set backspace=indent,eol,start
 function! FormatProse()
     set textwidth=79
     set formatoptions=at1
+endfunction
+
+function! FormatProseSe()
+    call FormatProse()
     set spell spelllang=sv
 endfunction
 
+function! FormatProseEn()
+    call FormatProse()
+    set spell spelllang=en
+endfunction
+
 function! FormatCode()
+    set textwidth=79
     set formatoptions=cq
     set nospell
 endfunction
 
 " Commands
 
-command! Prose call FormatProse()
+command! Prose call FormatProseSe()
+command! ProseEn call FormatProseEn()
 command! Code call FormatCode()
 
 if has("win32") || has("win64")
