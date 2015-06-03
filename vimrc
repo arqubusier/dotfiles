@@ -30,15 +30,13 @@ set shiftwidth=4
 " other than the (hard)tabstop
 set softtabstop=4
 set expandtab
-
-
 set autoindent
 
 " mappings
 " clipboard copy/paste
 nnoremap <M-c> "+y
 nnoremap <M-v> "+p
-nnoremap <F2> :w<cr>
+nnoremap <F2> :wa<cr>
 
 
 nnoremap ; :
@@ -47,7 +45,13 @@ nnoremap <Leader>bn :bnext<cr>
 nnoremap <Leader>bp :bprev<cr>
 nnoremap <Leader>tn :tabn<cr>
 nnoremap <Leader>tp :tabp<cr>
-nnoremap <Leader>pdb aimport pdb; pdb.set_trace()<Esc>
+nnoremap <Leader>pdb oimport pdb; pdb.set_trace()<Esc>
+
+map <Leader>mbe :MBEOpen<cr>
+map <Leader>mbc :MBEClose<cr>
+map <Leader>mbt :MBEToggle<cr>
+
+map <Leader>nt :NERDTree<cr>
 
 " backspace
 set backspace=indent,eol,start 
