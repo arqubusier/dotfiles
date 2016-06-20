@@ -31,3 +31,16 @@ if [ -d "$INTELLIJ_DIR" ]; then
     export PATH=${PATH}:$INTELLIJ_DIR
 fi
 export PATH=${PATH}:/home/herman/.gem/ruby/2.2.0/bin
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+alias rdoxygen=~/doxygen/build/release/bin/doxygen
+alias ddoxygen=~/doxygen/build/debug/bin/doxygen

@@ -24,6 +24,30 @@ URxvt.color13:      #815ba4
 URxvt.color14:      #5bc4bf
 URxvt.color15:      #e7e9db
 
+!Xterm
+XTerm*scrollBar: false
+
+XTerm*foreground:   rgb:a3/9e/9b
+XTerm*background:   rgb:2f/1e/2e
+
+XTerm*color0:       #2f1e2e
+XTerm*color1:       #ef6155
+XTerm*color2:       #48b685
+XTerm*color3:       #fec418
+XTerm*color4:       #06b6ef
+XTerm*color5:       #815ba4
+XTerm*color6:       #5bc4bf
+XTerm*color7:       #a39e9b
+
+XTerm*color8:       #776e71
+XTerm*color9:       #ef6155
+XTerm*color10:      #48b685
+XTerm*color11:      #fec418
+XTerm*color12:      #06b6ef
+XTerm*color13:      #815ba4
+XTerm*color14:      #5bc4bf
+XTerm*color15:      #e7e9db
+
 ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
 ! ! use 'shell' template to set these if necessary
 ! *.color16:      base09
