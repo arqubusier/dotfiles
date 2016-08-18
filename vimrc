@@ -15,10 +15,18 @@ set go-=T "remove toolbar
 set go-=r "remove scrollbars
 set go-=L 
 
-" solarized
+" Color scheme
 syntax enable
+set t_Co=256
 set background=dark
-colorscheme solarized
+
+if has("gui_running")
+    colorscheme solarized
+else
+    colorscheme delek
+    highlight Normal ctermbg=NONE
+    highlight nonText ctermbg=NONE
+endif
 
 " size of a hard tabstop
 set tabstop=4

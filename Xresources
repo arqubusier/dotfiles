@@ -27,8 +27,8 @@ URxvt.color15:      #e7e9db
 !Xterm
 XTerm*scrollBar: false
 
-XTerm*foreground:   rgb:a3/9e/9b
-XTerm*background:   rgb:2f/1e/2e
+XTerm*foreground:   #a39e9b
+XTerm*background:   #2f1e2e
 
 XTerm*color0:       #2f1e2e
 XTerm*color1:       #ef6155
