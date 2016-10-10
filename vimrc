@@ -17,15 +17,13 @@ set go-=L
 
 " Color scheme
 syntax enable
-set t_Co=256
 set background=dark
 
 if has("gui_running")
     colorscheme solarized
 else
-    colorscheme delek
-    highlight Normal ctermbg=NONE
-    highlight nonText ctermbg=NONE
+    set t_Co=256
+    colorscheme desert
 endif
 
 " size of a hard tabstop

@@ -1,28 +1,36 @@
 !Base16 Paradiso
 
 !URxvt
-URxvt.scrollBar: false
+urxvt.scrollBar: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
 
-URxvt.foreground:   #a39e9b
-URxvt.background:   #2f1e2e
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
 
-URxvt.color0:       #2f1e2e
-URxvt.color1:       #ef6155
-URxvt.color2:       #48b685
-URxvt.color3:       #fec418
-URxvt.color4:       #06b6ef
-URxvt.color5:       #815ba4
-URxvt.color6:       #5bc4bf
-URxvt.color7:       #a39e9b
+urxvt.foreground:   #a39e9b
+urxvt.background:   #2f1e2e
 
-URxvt.color8:       #776e71
-URxvt.color9:       #ef6155
-URxvt.color10:      #48b685
-URxvt.color11:      #fec418
-URxvt.color12:      #06b6ef
-URxvt.color13:      #815ba4
-URxvt.color14:      #5bc4bf
-URxvt.color15:      #e7e9db
+urxvt.color0:       #2f1e2e
+urxvt.color1:       #ef6155
+urxvt.color2:       #48b685
+urxvt.color3:       #fec418
+urxvt.color4:       #06b6ef
+urxvt.color5:       #815ba4
+urxvt.color6:       #5bc4bf
+urxvt.color7:       #a39e9b
+
+urxvt.color8:       #776e71
+urxvt.color9:       #ef6155
+urxvt.color10:      #48b685
+urxvt.color11:      #fec418
+urxvt.color12:      #06b6ef
+urxvt.color13:      #815ba4
+urxvt.color14:      #5bc4bf
+urxvt.color15:      #e7e9db
+
+urxvt*font: xft:DejaVu Sans Mono:size=10
+URxvt.intensityStyles: false
 
 !Xterm
 XTerm*scrollBar: false
