@@ -13,6 +13,7 @@ alias audio='ponymix unmute && ponymix set-volume 100'
 alias cmakeu='cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug'
 alias mwin='sudo mount /dev/sda4 ~/windows'
 alias multiscreen='xrandr   --output   LVDS1 --auto --output DP1 --auto --above LVDS1'
+alias layout='setxkbmap -model pc104 -layout us,se -variant dvorak, -option grp:alt_shift_toggle'
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 
 #
@@ -35,4 +36,5 @@ fi
 # export SYSTEMD_PAGER=
 
 #arch
-alias ext_display="xrandr --output LVDS1 --auto --output DP1 --auto --above LVDS1"
+alias x230_display="xrandr --output LVDS1 --auto --output DP1 --auto --above LVDS1"
+alias ida_display="xrandr --output DP1 --auto --output HDMI1 --auto --right-of DP1"
