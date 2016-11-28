@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OLDDIR=pwd
+OLDDIR=`pwd`
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 
