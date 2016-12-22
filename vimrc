@@ -38,6 +38,12 @@ set softtabstop=4
 set expandtab
 set autoindent
 
+" Wim wiki
+
+
+" Instant markdown
+
+
 " mappings
 " clipboard copy/paste
 nnoremap <M-c> "+y
