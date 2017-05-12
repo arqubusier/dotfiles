@@ -12,5 +12,7 @@ git clone https://github.com/altercation/vim-colors-solarized.git
 git clone https://github.com/fholgado/minibufexpl.vim.git 
 git clone https://github.com/scrooloose/nerdtree
 git clone https://github.com/scrooloose/syntastic.git
+git clone https://github.com/drmingdrmer/xptemplate.git
+git clone git@github.com:arqubusier/vim-modelica.git
 
 cd $OLDDIR
