@@ -34,6 +34,7 @@ fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
+alias ranger='ranger --choosedir=$HOME/rangerdir;cd $(cat $HOME/rangerdir)'
 
 #arch
 alias x230_display="xrandr --output LVDS1 --auto --output DP1 --auto --above LVDS1"
