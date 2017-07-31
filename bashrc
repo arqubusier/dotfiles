@@ -38,3 +38,5 @@ fi
 #arch
 alias x230_display="xrandr --output LVDS1 --auto --output DP1 --auto --above LVDS1"
 alias ida_display="xrandr --output DP1 --auto --output HDMI1 --auto --right-of DP1"
+
+alias dim="sudo tee /sys/class/backlight/intel_< 2000"
