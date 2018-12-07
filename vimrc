@@ -19,12 +19,7 @@ set go-=L
 syntax enable
 set background=dark
 
-if has("gui_running")
-    colorscheme solarized
-else
-    set t_Co=256
-    colorscheme desert
-endif
+colorscheme solarized
 
 " size of a hard tabstop
 set tabstop=4
