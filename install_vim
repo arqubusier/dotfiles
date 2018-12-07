@@ -16,6 +16,5 @@ git clone https://github.com/vimwiki/vimwiki.git
 git clone https://github.com/suan/vim-instant-markdown.git
 git clone https://github.com/vim-pandoc/vim-pandoc.git
 git clone https://github.com/drmingdrmer/xptemplate.git
-git clone git@github.com:arqubusier/vim-modelica.git
 
 cd $OLDDIR
