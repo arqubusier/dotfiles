@@ -1,59 +1,16 @@
 !URxvt
 URxvt.scrollBar: false
 ! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
-URxvt*scrollWithBuffer: true
+URxvt.scrollWithBuffer: true
 
 ! scroll back to the bottom on keypress
-URxvt*scrollTtyKeypress: true
+URxvt.scrollTtyKeypress: true
 
-!URxvt.foreground:   #a39e9b
-!URxvt.background:   #2f1e2e
-!
-!URxvt.color0:       #2f1e2e
-!URxvt.color1:       #ef6155
-!URxvt.color2:       #48b685
-!URxvt.color3:       #fec418
-!URxvt.color4:       #06b6ef
-!URxvt.color5:       #815ba4
-!URxvt.color6:       #5bc4bf
-!URxvt.color7:       #a39e9b
-!
-!URxvt.color8:       #776e71
-!URxvt.color9:       #ef6155
-!URxvt.color10:      #48b685
-!URxvt.color11:      #fec418
-!URxvt.color12:      #06b6ef
-!URxvt.color13:      #815ba4
-!URxvt.color14:      #5bc4bf
-!URxvt.color15:      #e7e9db
-
-
-URxvt.font: xft:Source Code Pro Medium:size=16
+URxvt.font: xft:DejaVu Sans Mono:size=12
 URxvt.intensityStyles: false
 
 !Xterm
 XTerm*scrollBar: false
-
-XTerm*foreground:   #a39e9b
-XTerm*background:   #2f1e2e
-
-XTerm*color0:       #2f1e2e
-XTerm*color1:       #ef6155
-XTerm*color2:       #48b685
-XTerm*color3:       #fec418
-XTerm*color4:       #06b6ef
-XTerm*color5:       #815ba4
-XTerm*color6:       #5bc4bf
-XTerm*color7:       #a39e9b
-
-XTerm*color8:       #776e71
-XTerm*color9:       #ef6155
-XTerm*color10:      #48b685
-XTerm*color11:      #fec418
-XTerm*color12:      #06b6ef
-XTerm*color13:      #815ba4
-XTerm*color14:      #5bc4bf
-XTerm*color15:      #e7e9db
 
 #define S_base03        #002b36
 #define S_base02        #073642
