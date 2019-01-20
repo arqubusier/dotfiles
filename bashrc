@@ -41,3 +41,10 @@ alias x230_display="xrandr --output LVDS1 --auto --output DP1 --auto --above LVD
 alias ida_display="xrandr --output DP1 --auto --output HDMI1 --auto --right-of DP1"
 
 alias dim="sudo tee /sys/class/backlight/intel_< 2000"
+
+export PATH="~/scripts:$PATH"
+export PATH="~/bin:$PATH"
+
+# Fix for java swing applications for tiling window managers.
+# Lies to java about "LG3D" being the current wm.
+wmname LG3D
