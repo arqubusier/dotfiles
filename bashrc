@@ -14,6 +14,7 @@ alias cmakeu='cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug'
 alias mwin='sudo mount /dev/sda4 ~/windows'
 alias multiscreen='xrandr   --output   LVDS1 --auto --output DP1 --auto --above LVDS1'
 alias layout='setxkbmap -model pc104 -layout us,se -variant dvorak, -option grp:alt_shift_toggle'
+alias wine32='WINEPREFIX="$HOME/.wine32" wine'
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 
 #
