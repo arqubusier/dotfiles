@@ -1,6 +1,5 @@
 !Base16 Paradiso
 
-!URxvt
 urxvt.scrollBar: false
 ! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
 URxvt*scrollWithBuffer: true
@@ -8,26 +7,26 @@ URxvt*scrollWithBuffer: true
 ! scroll back to the bottom on keypress
 URxvt*scrollTtyKeypress: true
 
-urxvt.foreground:   #a39e9b
-urxvt.background:   #2f1e2e
-
-urxvt.color0:       #2f1e2e
-urxvt.color1:       #ef6155
-urxvt.color2:       #48b685
-urxvt.color3:       #fec418
-urxvt.color4:       #06b6ef
-urxvt.color5:       #815ba4
-urxvt.color6:       #5bc4bf
-urxvt.color7:       #a39e9b
-
-urxvt.color8:       #776e71
-urxvt.color9:       #ef6155
-urxvt.color10:      #48b685
-urxvt.color11:      #fec418
-urxvt.color12:      #06b6ef
-urxvt.color13:      #815ba4
-urxvt.color14:      #5bc4bf
-urxvt.color15:      #e7e9db
+!urxvt.foreground:   #a39e9b
+!urxvt.background:   #2f1e2e
+!
+!urxvt.color0:       #2f1e2e
+!urxvt.color1:       #ef6155
+!urxvt.color2:       #48b685
+!urxvt.color3:       #fec418
+!urxvt.color4:       #06b6ef
+!urxvt.color5:       #815ba4
+!urxvt.color6:       #5bc4bf
+!urxvt.color7:       #a39e9b
+!
+!urxvt.color8:       #776e71
+!urxvt.color9:       #ef6155
+!urxvt.color10:      #48b685
+!urxvt.color11:      #fec418
+!urxvt.color12:      #06b6ef
+!urxvt.color13:      #815ba4
+!urxvt.color14:      #5bc4bf
+!urxvt.color15:      #e7e9db
 
 urxvt*font: xft:DejaVu Sans Mono:size=10
 URxvt.intensityStyles: false
@@ -35,26 +34,26 @@ URxvt.intensityStyles: false
 !Xterm
 XTerm*scrollBar: false
 
-XTerm*foreground:   #a39e9b
-XTerm*background:   #2f1e2e
-
-XTerm*color0:       #2f1e2e
-XTerm*color1:       #ef6155
-XTerm*color2:       #48b685
-XTerm*color3:       #fec418
-XTerm*color4:       #06b6ef
-XTerm*color5:       #815ba4
-XTerm*color6:       #5bc4bf
-XTerm*color7:       #a39e9b
-
-XTerm*color8:       #776e71
-XTerm*color9:       #ef6155
-XTerm*color10:      #48b685
-XTerm*color11:      #fec418
-XTerm*color12:      #06b6ef
-XTerm*color13:      #815ba4
-XTerm*color14:      #5bc4bf
-XTerm*color15:      #e7e9db
+!XTerm*foreground:   #a39e9b
+!XTerm*background:   #2f1e2e
+!
+!XTerm*color0:       #2f1e2e
+!XTerm*color1:       #ef6155
+!XTerm*color2:       #48b685
+!XTerm*color3:       #fec418
+!XTerm*color4:       #06b6ef
+!XTerm*color5:       #815ba4
+!XTerm*color6:       #5bc4bf
+!XTerm*color7:       #a39e9b
+!
+!XTerm*color8:       #776e71
+!XTerm*color9:       #ef6155
+!XTerm*color10:      #48b685
+!XTerm*color11:      #fec418
+!XTerm*color12:      #06b6ef
+!XTerm*color13:      #815ba4
+!XTerm*color14:      #5bc4bf
+!XTerm*color15:      #e7e9db
 
 ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
 ! ! use 'shell' template to set these if necessary
@@ -64,3 +63,105 @@ XTerm*color15:      #e7e9db
 ! *.color19:      base02
 ! *.color20:      base04
 ! *.color21:      base06
+!
+
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
+
+
+! Common
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+URxvt*background:              S_base03
+URxvt*foreground:              S_base0
+URxvt*fading:                  40
+URxvt*fadeColor:               S_base03
+URxvt*cursorColor:             S_base1
+URxvt*pointerColorBackground:  S_base01
+URxvt*pointerColorForeground:  S_base1
+
+URxvt*color0:                  S_base02
+URxvt*color1:                  S_red
+URxvt*color2:                  S_green
+URxvt*color3:                  S_yellow
+URxvt*color4:                  S_blue
+URxvt*color5:                  S_magenta
+URxvt*color6:                  S_cyan
+URxvt*color7:                  S_base2
+URxvt*color9:                  S_orange
+URxvt*color8:                  S_base03
+URxvt*color10:                 S_base01
+URxvt*color11:                 S_base00
+URxvt*color12:                 S_base0
+URxvt*color13:                 S_violet
+URxvt*color14:                 S_base1
+URxvt*color15:                 S_base3
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+xterm*background:              S_base03
+xterm*foreground:              S_base0
+xterm*fading:                  40
+xterm*fadeColor:               S_base03
+xterm*cursorColor:             S_base1
+xterm*pointerColorBackground:  S_base01
+xterm*pointerColorForeground:  S_base1
+
+xterm*color0:                  S_base02
+xterm*color1:                  S_red
+xterm*color2:                  S_green
+xterm*color3:                  S_yellow
+xterm*color4:                  S_blue
+xterm*color5:                  S_magenta
+xterm*color6:                  S_cyan
+xterm*color7:                  S_base2
+xterm*color9:                  S_orange
+xterm*color8:                  S_base03
+xterm*color10:                 S_base01
+xterm*color11:                 S_base00
+xterm*color12:                 S_base0
+xterm*color13:                 S_violet
+xterm*color14:                 S_base1
+xterm*color15:                 S_base3
