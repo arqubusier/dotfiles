@@ -17,6 +17,7 @@ alias ghcp='/usr/share/ghc-pristine/bin/ghc'
 alias multiscreen='xrandr   --output   LVDS1 --auto --output DP1 --auto --above LVDS1'
 alias layout='setxkbmap -model pc104 -layout us,se -variant dvorak, -option grp:alt_shift_toggle'
 alias wine32='WINEPREFIX="$HOME/.wine32" wine'
+alias setlayout='setxkbmap -model pc104 -layout us,se -variant dvorak, -option grp:alt_caps_toggle'
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 
 #
