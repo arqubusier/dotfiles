@@ -33,6 +33,8 @@ set softtabstop=4
 set expandtab
 set autoindent
 
+set autochdir
+
 " Wim wiki
 
 
@@ -54,6 +56,7 @@ nnoremap <Leader>bp :bprev<cr>
 nnoremap <Leader>tn :tabn<cr>
 nnoremap <Leader>tp :tabp<cr>
 nnoremap <Leader>pdb oimport pdb; pdb.set_trace()<Esc>
+nnoremap <Leader>pudb oimport pudb; pu.db<Esc>
 
 map <Leader>mbe :MBEOpen<cr>
 map <Leader>mbc :MBEClose<cr>
@@ -79,6 +82,14 @@ endfunction
 function! FormatProseEn()
     call FormatProse()
     set spell spelllang=en
+endfunction
+
+function! Spell()
+    set spell spelllang=en
+endfunction
+
+function! NoSpell()
+    set nospell
 endfunction
 
 function! FormatCode()
