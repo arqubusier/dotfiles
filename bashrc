@@ -45,6 +45,8 @@ alias dim="sudo tee /sys/class/backlight/intel_< 2000"
 
 export PATH="~/scripts:$PATH"
 export PATH="~/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/bin:$PATH"
 
 # Fix for java swing applications for tiling window managers.
 # Lies to java about "LG3D" being the current wm.
