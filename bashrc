@@ -18,6 +18,7 @@ alias ghcip='/usr/share/ghc-pristine/bin/ghci'
 alias multiscreen='xrandr   --output   LVDS1 --auto --output DP1 --auto --above LVDS1'
 alias layout='setxkbmap -model pc104 -layout us,se -variant dvorak, -option grp:alt_shift_toggle'
 alias wine32='WINEPREFIX="$HOME/.wine32" wine'
+alias setlayout='setxkbmap -model pc104 -layout us,se -variant dvorak, -option grp:alt_caps_toggle'
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 
 #
@@ -49,6 +50,8 @@ alias dim="sudo tee /sys/class/backlight/intel_< 2000"
 export PATH="~/scripts:$PATH"
 export PATH="~/bin:$PATH"
 export PATH="~/.cabal/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/bin:$PATH"
 
 # Fix for java swing applications for tiling window managers.
 # Lies to java about "LG3D" being the current wm.
