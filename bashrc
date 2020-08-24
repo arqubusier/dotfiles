@@ -14,6 +14,7 @@ alias audio='ponymix unmute && ponymix set-volume 100'
 alias cmakeu='cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug'
 alias mwin='sudo mount /dev/sda4 ~/windows'
 alias ghcp='/usr/share/ghc-pristine/bin/ghc'
+alias ghcip='/usr/share/ghc-pristine/bin/ghci'
 alias multiscreen='xrandr   --output   LVDS1 --auto --output DP1 --auto --above LVDS1'
 alias layout='setxkbmap -model pc104 -layout us,se -variant dvorak, -option grp:alt_shift_toggle'
 alias wine32='WINEPREFIX="$HOME/.wine32" wine'
@@ -48,6 +49,9 @@ alias dim="sudo tee /sys/class/backlight/intel_< 2000"
 
 export PATH="~/scripts:$PATH"
 export PATH="~/bin:$PATH"
+export PATH="~/.cabal/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/bin:$PATH"
 
 # Fix for java swing applications for tiling window managers.
 # Lies to java about "LG3D" being the current wm.
