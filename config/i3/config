@@ -59,7 +59,7 @@ bindsym $mod+Shift+c kill
 
 # launch applications
 bindsym $mod+d exec rofi -show drun -show-icons
-bindsym $mod+k exec rofi -show window
+bindsym $mod+x exec rofi -show window
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -202,3 +202,6 @@ bar {
     }
     status_command i3status
 }
+
+# Dynamic icon names, requires i3wsr
+exec_always --no-startup-id /usr/bin/i3wsr --remove-duplicates
