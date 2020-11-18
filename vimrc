@@ -33,8 +33,6 @@ set softtabstop=4
 set expandtab
 set autoindent
 
-set autochdir
-
 " Wim wiki
 
 
