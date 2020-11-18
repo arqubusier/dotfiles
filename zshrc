@@ -100,43 +100,9 @@ source $ZSH/oh-my-zsh.sh
 xset r rate 214 33
 alias setlayout='setxkbmap -model pc104 -layout us,se -variant dvorak, -option grp:alt_caps_toggle'
 
-export AMSR_SIP_DIR=/home/vsarchelu/amsr-mono/adaptive-microsar
-export ARTIFACTS_DIR="$AMSR_SIP_DIR/builds/native" 
-
-#
-# Bullseye
-#
-export PATH=/opt/bullseye/v8.15.22a/bin:$PATH
-export COVFILE=~/Coverage/amsr-vector-fs-libvac.cov
-alias covshow='covhtml -f$COVFILE ~/Coveragehmtl && xdg-open ~/Coveragehmtl/index.html&'
-
-#
-# QNX
-#
-export QNX_HOST=/home/vsarchelu/qnx/toolchain/qnx700/host/linux/x86_64/
-export QNX_TARGET=/home/vsarchelu/qnx/toolchain/qnx700/target/qnx7/
-
-#
-# Tata
-#
-export GITHUB_V2_WORKINGCOPY=/home/vsarchelu/tata/amsr-tata-exchange-v2
-export GITLAB_WORKINGCOPY=/home/vsarchelu/amsr-mono/adaptive-microsar
-#
-# Bauhaus
-#
-bauhaus_single_file_run () {
-    python3 ${AMSR_SIP_DIR}/Infrastructure/bauhaus/utils/single_file_analysis/single_file_analysis.py -b "${AMSR_SIP_DIR}"/builds/single_file/amsr-vector-fs-libvac $*
-}
-
-bauhaus_single_file_setup() {
-    cd $AMSR_SIP_DIR/Infrastructure/bauhaus/test
-    source perform_test_env.sh
-    cd $AMSR_SIP_DIR
-    ./BuildHelper/BuildHelper -b builds/single_file -s . -t amsr-vector-fs-sec-libseccom --cmake-options-file BuildHelper/config/development.json --cmake-toolchain-file CMakeSupport/toolchain/cafeCC/cafeCC-6/x86_64/linux_debug.toolchain --skip-build -o MODULE:amsr-vector-fs-libvac:BUILD_TESTS=ON
-}
-source $AXIVION_BAUHAUS_HOME/bauhaus-kshrc
-export AXIVION_BAUHAUS_DASHBOARD_HOME=/home/vsarchelu/amsr-mono/adaptive-microsar/Infrastructure/bauhaus/dashboard
-#alias bauhaus_single_file_setup="$AMSR_SIP_DIR/BuildHelper/BuildHelper -b $AMSR_SIP_DIR/builds/single_file -s . -t amsr-vector-fs-libvac --cmake-options-file $AMSR_SIP_DIR/BuildHelper/config/development.json --cmake-toolchain-file $AMSR_SIP_DIR/CMakeSupport/toolchain/cafeCC/cafeCC-6/x86_64/linux_debug.toolchain --skip-build -o MODULE:amsr-vector-fs-libvac:BUILD_TESTS=ON"
+if [ -f "$HOME"/.shrc.vector ]; then
+    source "$HOME"/.shrc.vector
+fi
 
 #
 # fasd
