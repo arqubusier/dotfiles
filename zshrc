@@ -125,6 +125,9 @@ alias o='a -e xdg-open' # quick opening files with xdg-open
 #
 alias fn="find . -name"
 alias g="grep -nIr"
+function c() {
+    cd $@ && ls
+}
 
 #
 # Dolphin
