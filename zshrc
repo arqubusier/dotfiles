@@ -124,10 +124,12 @@ alias o='a -e xdg-open' # quick opening files with xdg-open
 # misc
 #
 alias fn="find . -name"
+alias fni="find . -iname"
 alias g="grep -nIr"
 function c() {
     cd $@ && ls
 }
+alias l="ls -la"
 
 #
 # Dolphin

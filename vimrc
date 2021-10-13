@@ -19,7 +19,7 @@ set go-=L
 syntax enable
 set background=dark
 
-colorscheme solarized
+colorscheme morning
 
 " size of a hard tabstop
 set tabstop=4

@@ -58,9 +58,10 @@ bindsym $mod+shift+Return exec i3-sensible-terminal
 bindsym $mod+Shift+c kill
 
 # launch applications
-bindsym $mod+d exec rofi -show drun -show-icons
+bindsym $mod+d exec rofi -modi "drun" -show drun
 bindsym $mod+Shift+d exec rofi -show run
-bindsym $mod+x exec rofi -show window
+bindsym $mod+x move container to workspace 10; exec rofi -mode "combi" -show combi -show-icons
+bindsym $mod+Shift+x exec rofi -mode "combi" -show combi -show-icons
 bindsym $mod+period exec rofi -show emoji
 bindsym $mod+y exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 # There also is the (new) i3-dmenu-desktop which only displays applications

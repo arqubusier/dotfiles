@@ -17,7 +17,7 @@ configuration {
 /*	run-command: "{cmd}";*/
 /*	run-list-command: "";*/
 /*	run-shell-command: "{terminal} -e {cmd}";*/
-/*	window-command: "wmctrl -i -R {window}";*/
+    window-command: "wmctrl -i -R {window}";
 /*	window-match-fields: "all";*/
 /*	icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
@@ -90,9 +90,9 @@ configuration {
 /*	kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";*/
 /*	kb-remove-to-eol: "Control+k";*/
 /*	kb-remove-to-sol: "Control+u";*/
-/*	kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";*/
+	kb-accept-entry: "Control+j,Control+m,shift+Return,KP_Enter";*/
 /*	kb-accept-custom: "Control+Return";*/
-/*	kb-accept-alt: "Shift+Return";*/
+	kb-accept-alt: "Return";
 /*	kb-delete-entry: "Shift+Delete";*/
 /*	kb-mode-next: "Shift+Right,Control+Tab";*/
 /*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
