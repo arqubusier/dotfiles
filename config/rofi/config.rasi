@@ -90,9 +90,9 @@ configuration {
 /*	kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";*/
 /*	kb-remove-to-eol: "Control+k";*/
 /*	kb-remove-to-sol: "Control+u";*/
-	kb-accept-entry: "Control+j,Control+m,shift+Return,KP_Enter";*/
+	kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
 /*	kb-accept-custom: "Control+Return";*/
-	kb-accept-alt: "Return";
+	kb-accept-alt: "Tab";
 /*	kb-delete-entry: "Shift+Delete";*/
 /*	kb-mode-next: "Shift+Right,Control+Tab";*/
 /*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
@@ -100,7 +100,7 @@ configuration {
 /*	kb-row-right: "Control+Page_Down";*/
 /*	kb-row-up: "Up,Control+p,ISO_Left_Tab";*/
 /*	kb-row-down: "Down,Control+n";*/
-/*	kb-row-tab: "Tab";*/
+	kb-row-tab: "";
 /*	kb-page-prev: "Page_Up";*/
 /*	kb-page-next: "Page_Down";*/
 /*	kb-row-first: "Home,KP_Home";*/
@@ -144,7 +144,8 @@ configuration {
 /*	ml-row-right: "ScrollRight";*/
 /*	ml-row-up: "ScrollUp";*/
 /*	ml-row-down: "ScrollDown";*/
-/*	me-select-entry: "MousePrimary";*/
-/*	me-accept-entry: "MouseDPrimary";*/
+	me-select-entry: "MouseMiddle";
+	me-accept-custom: "MousePrimary";
+	me-accept-entry: "MouseSecondary";
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
