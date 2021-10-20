@@ -16,7 +16,7 @@ configuration {
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/
 /*	run-list-command: "";*/
-/*	run-shell-command: "{terminal} -e {cmd}";*/
+	run-shell-command: "{cmd}";
     window-command: "wmctrl -i -R {window}";
 /*	window-match-fields: "all";*/
 /*	icon-theme: ;*/
@@ -90,9 +90,9 @@ configuration {
 /*	kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";*/
 /*	kb-remove-to-eol: "Control+k";*/
 /*	kb-remove-to-sol: "Control+u";*/
-	kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
+	kb-accept-entry: "Control+j,Control+m,shift+Return,KP_Enter";
 /*	kb-accept-custom: "Control+Return";*/
-	kb-accept-alt: "Tab";
+	kb-accept-alt: "Return";
 /*	kb-delete-entry: "Shift+Delete";*/
 /*	kb-mode-next: "Shift+Right,Control+Tab";*/
 /*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
@@ -100,7 +100,7 @@ configuration {
 /*	kb-row-right: "Control+Page_Down";*/
 /*	kb-row-up: "Up,Control+p,ISO_Left_Tab";*/
 /*	kb-row-down: "Down,Control+n";*/
-	kb-row-tab: "";
+	kb-row-tab: "Tab";
 /*	kb-page-prev: "Page_Up";*/
 /*	kb-page-next: "Page_Down";*/
 /*	kb-row-first: "Home,KP_Home";*/
