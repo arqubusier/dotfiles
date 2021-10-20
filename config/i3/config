@@ -43,85 +43,68 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+
+bindsym $mod+a focus parent
+bindsym $mod+b layout tabbed
+bindsym $mod+Shift+c kill
+bindsym $mod+d exec rofi -modi "drun" -show drun -show-icons
+bindsym $mod+Shift+d exec rofi -show run
+bindsym $mod+f fullscreen toggle
+bindsym $mod+h focus left
+bindsym $mod+Shift+H move left
+bindsym $mod+i split h
+bindsym $mod+j focus down
+bindsym $mod+Shift+J move down
+bindsym $mod+k focus up
+bindsym $mod+Shift+K move up
+bindsym $mod+l focus right
+bindsym $mod+Shift+L move right
+bindsym $mod+m layout stacking
+# move window to pool
+bindsym $mod+o move container to workspace $ws3
+bindsym $mod+t layout toggle split
+bindsym $mod+u split v
+# to main
+bindsym $mod+p workspace $ws1
+bindsym $mod+x exec rofi -mode "combi" -show combi -show-icons
+bindsym $mod+y exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+# combi in temp
+bindsym $mod+odiaeresis workspace $ws2; move container to workspace $ws3; exec rofi -mode "combi" -show "combi" -show-icons
+# to temp
+bindsym $mod+adiaeresis workspace $ws2
+
+# change windows:
+bindsym $mod+Left focus left
+bindsym $mod+Shift+Left move left
+bindsym $mod+Down focus down
+bindsym $mod+Shift+Down move down
+bindsym $mod+Up focus up
+bindsym $mod+Shift+Up move up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+period exec rofi -show emoji
+# start a terminal
+bindsym $mod+shift+Return exec i3-sensible-terminal
+
+bindcode --release 133 move container to workspace $ws3; exec rofi -mode "combi" -show combi -show-icons
+
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
 
-# start a terminal
-bindsym $mod+shift+Return exec i3-sensible-terminal
-
-# kill focused window
-bindsym $mod+Shift+c kill
-
-# launch applications
-bindsym $mod+d exec rofi -modi "drun" -show drun -show-icons
-bindsym $mod+Shift+d exec rofi -show run
-bindcode --release 133 move container to workspace $ws3; exec rofi -mode "combi" -show combi -show-icons
-bindsym $mod+x exec rofi -mode "combi" -show combi -show-icons
-bindsym $mod+period exec rofi -show emoji
-bindsym $mod+y exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-# minimize
-bindsym $mod+o move container to workspace $ws3
-# back to primary
-bindsym $mod+p workspace $ws1
-# temporary
-bindsym $mod+odiaeresis workspace $ws2; move container to workspace $ws3; exec rofi -mode "combi" -show "combi" -show-icons
-bindsym $mod+adiaeresis workspace $ws2
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+H move left
-bindsym $mod+Shift+J move down
-bindsym $mod+Shift+K move up
-bindsym $mod+Shift+L move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+i split h
-
-# split in vertical orientation
-bindsym $mod+u split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+m layout stacking
-bindsym $mod+b layout tabbed
-bindsym $mod+t layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+c focus child
