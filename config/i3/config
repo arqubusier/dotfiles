@@ -92,6 +92,7 @@ bindsym $mod+period exec rofi -show emoji
 bindsym $mod+shift+Return exec i3-sensible-terminal
 
 bindcode --release 133 move container to workspace $ws3; exec rofi -mode "combi" -show combi -show-icons
+bindcode --release 134 move container to workspace $ws3; exec rofi -mode "combi" -show combi -show-icons
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status

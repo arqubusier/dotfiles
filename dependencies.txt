@@ -1,3 +1,4 @@
+urxvt
 rofi
 xdotool
 wmctrl
