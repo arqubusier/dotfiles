@@ -1,0 +1,4 @@
+rofi
+xdotool
+wmctrl
+greenclip
