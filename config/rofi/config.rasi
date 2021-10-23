@@ -15,7 +15,7 @@ configuration {
 /*	terminal: "rofi-sensible-terminal";*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
-/*	run-command: "{cmd}";*/
+	run-command: "run_replace.bash {cmd}";
 /*	run-list-command: "";*/
 	run-shell-command: "{cmd}";
     window-command: "wmctrl -i -R {window}";
@@ -91,17 +91,17 @@ configuration {
 /*	kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";*/
 /*	kb-remove-to-eol: "Control+k";*/
 /*	kb-remove-to-sol: "Control+u";*/
-	kb-accept-entry: "Control+j,Control+m,shift+Return,KP_Enter";
-/*	kb-accept-custom: "Control+Return";*/
-	kb-accept-alt: "Return";
+	kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
+	kb-accept-custom: "Control+Escape";
+	kb-accept-alt: "shift+Return";
 /*	kb-delete-entry: "Shift+Delete";*/
-/*	kb-mode-next: "Shift+Right,Control+Tab";*/
-/*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
+	kb-mode-next: "Shift+Right,shift+Tab,MouseBack";
+	kb-mode-previous: "Shift+Left,Tab,MouseForward";
 /*	kb-row-left: "Control+Page_Up";*/
 /*	kb-row-right: "Control+Page_Down";*/
 /*	kb-row-up: "Up,Control+p,ISO_Left_Tab";*/
 /*	kb-row-down: "Down,Control+n";*/
-	kb-row-tab: "Tab";
+	kb-row-tab: "";
 /*	kb-page-prev: "Page_Up";*/
 /*	kb-page-next: "Page_Down";*/
 /*	kb-row-first: "Home,KP_Home";*/
@@ -112,7 +112,7 @@ configuration {
 /*	kb-toggle-case-sensitivity: "grave,dead_grave";*/
 /*	kb-toggle-sort: "Alt+grave";*/
 /*	kb-cancel: "Escape,Control+g,Control+bracketleft";*/
-/*	kb-custom-1: "Alt+1";*/
+	kb-custom-1: "Control+Return,MouseMiddle";
 /*	kb-custom-2: "Alt+2";*/
 /*	kb-custom-3: "Alt+3";*/
 /*	kb-custom-4: "Alt+4";*/
@@ -143,10 +143,9 @@ configuration {
 /*	kb-select-10: "Super+0";*/
 /*	ml-row-left: "ScrollLeft";*/
 /*	ml-row-right: "ScrollRight";*/
-/*	ml-row-up: "ScrollUp";*/
-/*	ml-row-down: "ScrollDown";*/
-	me-select-entry: "MouseMiddle";
+	ml-row-up: "";
+	ml-row-down: "";
+	me-select-entry: "ScrollUp";
 	me-accept-custom: "MousePrimary";
 	me-accept-entry: "MouseSecondary";
-/*	me-accept-custom: "Control+MouseDPrimary";*/
 }

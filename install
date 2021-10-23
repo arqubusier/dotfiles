@@ -32,4 +32,11 @@ for file in $files; do
     ln -s "$dir/$file" ~/."$file"
 done
 
+# utility scripts
+scripts="run_replace grab_window.bash"
+for script in $scripts;do
+    mkdir -p ~/bin
+    ln -s bin/$script ~/bin/$script
+done
+
 cd "$DIR"

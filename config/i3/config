@@ -45,8 +45,10 @@ exec --no-startup-id nm-applet
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+set $mouse_mod Mod1
+floating_modifier $mouse_mod
 
+set $rofi_theme ~/.config/rofi/launchers/misc/kde_simplemenu.rasi
 
 bindsym $mod+a focus parent
 bindsym $mod+b layout tabbed
@@ -69,13 +71,12 @@ bindsym $mod+o move container to workspace $ws3
 bindsym $mod+t layout toggle split
 bindsym $mod+u split v
 # to main
-bindsym $mod+p workspace $ws1
-bindsym $mod+x exec rofi -mode "combi" -show combi -show-icons
+bindsym $mod+p workspace $ws3
 bindsym $mod+y exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 # combi in temp
-bindsym $mod+odiaeresis workspace $ws2; move container to workspace $ws3; exec rofi -mode "combi" -show "combi" -show-icons
+bindsym $mod+odiaeresis workspace $ws2
 # to temp
-bindsym $mod+adiaeresis workspace $ws2
+bindsym $mod+adiaeresis workspace $ws1
 
 # change windows:
 bindsym $mod+Left focus left
@@ -87,12 +88,12 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Right focus right
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+period exec rofi -show emoji
-# start a terminal
+bindsym $mod+period exec rofi -show emoji  -theme $rofi_theme
+# start a terfloating togglefloating togglefloating togglefloating togglefloating toggleminal
 bindsym $mod+shift+Return exec i3-sensible-terminal
 
-bindcode --release 133 move container to workspace $ws3; exec rofi -mode "combi" -show combi -show-icons
-bindcode --release 134 move container to workspace $ws3; exec rofi -mode "combi" -show combi -show-icons
+bindcode --release 133 exec "rofi -show grabwin -modi 'grabwin:~/dotfiles/bin/grab_window.bash,run,drun' -show-icons -theme \\"$rofi_theme\\""
+bindcode --release 134 exec "rofi -show grabwin -modi 'grabwin:~/dotfiles/bin/grab_window.bash,run,drun' -show-icons -theme \\"$rofi_theme\\""
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -105,6 +106,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym $mod+space focus mode_toggle
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+bindsym --whole-window $mouse_mod+button2 kill
 
 
 # focus the child container
@@ -112,10 +114,10 @@ bindsym $mod+Shift+space floating toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "main"
-set $ws2 "temp"
-set $ws3 "pool"
-set $ws4 "4"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "pool"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
