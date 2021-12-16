@@ -1,4 +1,6 @@
 #!/bin/bash
+set -x
+set -e
 mod=Mod4 # use Super as the main modifier
 function hc () {
     herbstclient $*
@@ -6,7 +8,10 @@ function hc () {
 
 hc set window_border_active_color red
 
+bindir=~/bin
+launcher="rofi -show grabwin -modi grabwin:$bindir/grab_window_hlwm.bash,run,drun -show-icons"
 
+hc keybind ${mod}+a spawn $launcher
 hc keybind ${mod}+r reload
 hc keybind ${mod}+e split right
 hc keybind ${mod}+j cycle_all -1
@@ -15,11 +20,11 @@ hc keybind ${mod}+Shift+k shift -i r
 hc keybind ${mod}+k cycle_all 1
 hc keybind ${mod}+u split bottom
 hc keybind ${mod}+o move 9 
-hc keybind ${mod}+p exec dmenu_run 
+hc keybind ${mod}+p spawn dmenu_run 
 hc keybind ${mod}+Shift+q close_and_remove
 hc keybind ${mod}+Shift+c close_or_remove
 hc keybind ${mod}+Shift+a remove
-hc keybind ${mod}+delete quit
+hc keybind ${mod}+Delete quit
 hc keybind ${mod}+space cycle_layout
 hc keybind ${mod}+Shift+Return spawn xterm 
 hc keybind ${mod}+Ctrl+j resize left

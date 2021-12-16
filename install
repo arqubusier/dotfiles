@@ -7,38 +7,40 @@ set -e
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc zshrc.d/zshrc Xresources tmux.conf gdbinit config/i3/config config/rofi/config.rasi config/herbstluftwm/autostart"    # list of files/folders to symlink in homedir
+herbst=.config/herbstluftwm/autostart
+files=".vimrc .zshrc.d/zshrc .Xresources .tmux.conf .gdbinit .config/i3/config .config/rofi/config.rasi $herbst"    # list of files/folders to symlink in homedir
 
 ##########
-mkdir -p ~/.config
 
 # create dotfiles_old in homedir
-echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p "$olddir"
-echo "...done"
-
-# change to the dotfiles directory
-echo "Changing to the $dir directory"
 cd "$dir"
-echo "...done"
+
+function backup_and_link() {
+    repo=$1
+    destDir=$2
+    backup=$3
+    shift 2
+    files="$*"
+
+    for file in $files; do
+        dest="$destDir/${file}"
+        if [ -f "$dest" ]; then
+            mv "$dest" "${backup}/"
+        fi
+        if [ -h "$dest" ]; then
+            rm "$dest"
+        fi
+        mkdir -p $(dirname "$dest")
+        ln -s "$repo/$file" "$dest"
+    done
+}
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
-for file in $files; do
-    dest=~/".${file}"
-    if [ -f "$dest" ]; then
-        mv "$dest" "${olddir}/"
-    fi
-    mkdir -p $(dirname "$dest")
-    ln -s "$dir/$file" "$dest"
-done
+backup_and_link ~/dotfiles ~ "$olddir" $files
+chmod +x ~/"$herbst"
 
 # utility scripts
-scripts="run_replace grab_window.bash"
-mkdir -p ~/bin
-for script in $scripts;do
-    ln -s bin/"$script" ~/bin/"$script"
-done
-
-cd "$DIR"
+scripts="run_replace grab_window.bash grab_window_hlwm.bash"
+backup_and_link ~/dotfiles/bin ~/bin "$olddir" $scripts
