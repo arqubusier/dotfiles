@@ -1,5 +1,0 @@
-urxvt
-rofi
-xdotool
-wmctrl
-greenclip

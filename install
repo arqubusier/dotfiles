@@ -2,16 +2,17 @@
 ############################
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
+set -x
+set -e
 
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc zshrc.d/zshrc Xresources tmux.conf gdbinit config/i3/config config/rofi/config.rasi"    # list of files/folders to symlink in homedir
+files="vimrc zshrc.d/zshrc Xresources tmux.conf gdbinit config/i3/config config/rofi/config.rasi config/herbstluftwm/autostart"    # list of files/folders to symlink in homedir
 
 ##########
-mkdir -p ~/.vimrc
-mkdir -p ~/.Xresources
+mkdir -p ~/.config
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
@@ -25,18 +26,19 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv "~/.$file" ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    mkdir -p $(dirname "$file")
-    ln -s "$dir/$file" ~/."$file"
+    dest=~/".${file}"
+    if [ -f "$dest" ]; then
+        mv "$dest" "${olddir}/"
+    fi
+    mkdir -p $(dirname "$dest")
+    ln -s "$dir/$file" "$dest"
 done
 
 # utility scripts
 scripts="run_replace grab_window.bash"
+mkdir -p ~/bin
 for script in $scripts;do
-    mkdir -p ~/bin
-    ln -s bin/$script ~/bin/$script
+    ln -s bin/"$script" ~/bin/"$script"
 done
 
 cd "$DIR"
