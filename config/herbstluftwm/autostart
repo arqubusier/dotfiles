@@ -1,0 +1,42 @@
+#!/bin/bash
+mod=Mod4 # use Super as the main modifier
+function hc () {
+    herbstclient $*
+}
+
+hc set window_border_active_color red
+
+
+hc keybind ${mod}+r reload
+hc keybind ${mod}+e split right
+hc keybind ${mod}+j cycle_all -1
+hc keybind ${mod}+k cycle_all 1
+hc keybind ${mod}+u split bottom
+hc keybind ${mod}+o move 9 
+hc keybind ${mod}+p exec dmenu_run 
+hc keybind ${mod}+Shift+q close_and_remove
+hc keybind ${mod}+Shift+c close_or_remove
+hc keybind ${mod}+Shift+a remove
+hc keybind ${mod}+delete quit
+hc keybind ${mod}+space cycle_layout
+hc keybind ${mod}+Shift+Return spawn xterm 
+hc keybind ${mod}+Ctrl+j resize left
+hc keybind ${mod}+Ctrl+k resize right
+hc keybind ${mod}+1 use 1
+hc keybind ${mod}+2 use 2
+hc keybind ${mod}+3 use 3
+hc keybind ${mod}+4 use 4
+hc keybind ${mod}+5 use 5
+hc keybind ${mod}+6 use 6
+hc keybind ${mod}+7 use 7
+hc keybind ${mod}+8 use 8
+hc keybind ${mod}+9 use 9
+hc keybind ${mod}+Shift+1 mov 1
+hc keybind ${mod}+Shift+2 move 2
+hc keybind ${mod}+Shift+3 move 3
+hc keybind ${mod}+Shift+4 move 4
+hc keybind ${mod}+Shift+5 move 5
+hc keybind ${mod}+Shift+6 move 6
+hc keybind ${mod}+Shift+7 move 7
+hc keybind ${mod}+Shift+8 move 8
+hc keybind ${mod}+Shift+9 move 9
