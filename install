@@ -2,43 +2,46 @@
 ############################
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
+set -x
+set -e
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-# list of files/folders to symlink in homedir
-files="vimrc zshrc.d/zshrc Xresources tmux.conf gdbinit config/i3/config \
-    config/rofi/config.rasi config/keepmenu/config.ini"
+herbst=.config/herbstluftwm/autostart
+files=".vimrc .zshrc.d/zshrc .Xresources .tmux.conf .gdbinit .config/i3/config .config/rofi/config.rasi \
+       $herbst .config/keepmenu/config.ini"
 
 ##########
-mkdir -p ~/.vimrc
-mkdir -p ~/.Xresources
 
 # create dotfiles_old in homedir
-echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p "$olddir"
-echo "...done"
-
-# change to the dotfiles directory
-echo "Changing to the $dir directory"
 cd "$dir"
-echo "...done"
+
+function backup_and_link() {
+    repo=$1
+    destDir=$2
+    backup=$3
+    shift 2
+    files="$*"
+
+    for file in $files; do
+        dest="$destDir/${file}"
+        if [ -f "$dest" ]; then
+            mv "$dest" "${backup}/"
+        fi
+        if [ -h "$dest" ]; then
+            rm "$dest"
+        fi
+        mkdir -p $(dirname "$dest")
+        ln -s "$repo/$file" "$dest"
+    done
+}
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv "~/.$file" ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    mkdir -p $(dirname "$file")
-    ln -s "$dir/$file" ~/."$file"
-done
+backup_and_link ~/dotfiles ~ "$olddir" $files
+chmod +x ~/"$herbst"
 
 # utility scripts
-scripts="run_replace grab_window.bash"
-for script in $scripts;do
-    mkdir -p ~/bin
-    ln -s bin/$script ~/bin/$script
-done
-
-cd "$DIR"
+scripts="run_replace grab_window.bash grab_window_hlwm.bash"
+backup_and_link ~/dotfiles/bin ~/bin "$olddir" $scripts
