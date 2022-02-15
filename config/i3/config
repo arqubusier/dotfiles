@@ -72,6 +72,7 @@ bindsym $mod+t layout toggle split
 bindsym $mod+u split v
 # to main
 bindsym $mod+p workspace $ws3
+bindsym $mod+x exec keepmenu
 bindsym $mod+y exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 # combi in temp
 bindsym $mod+odiaeresis workspace $ws2
@@ -200,6 +201,7 @@ bar {
     status_command i3status
 }
 
+exec setxkbmap se
 #exec_always --no-startup-id /usr/bin/i3wsr --remove-duplicates
 # Dynamic icon names, requires i3wsr
 exec --no-startup-id ~/bin/greenclip daemon

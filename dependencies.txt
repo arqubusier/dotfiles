@@ -3,3 +3,4 @@ rofi
 xdotool
 wmctrl
 greenclip
+keepmenu

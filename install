@@ -7,7 +7,9 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc zshrc.d/zshrc Xresources tmux.conf gdbinit config/i3/config config/rofi/config.rasi"    # list of files/folders to symlink in homedir
+# list of files/folders to symlink in homedir
+files="vimrc zshrc.d/zshrc Xresources tmux.conf gdbinit config/i3/config \
+    config/rofi/config.rasi config/keepmenu/config.ini"
 
 ##########
 mkdir -p ~/.vimrc
