@@ -67,7 +67,7 @@ bindsym $mod+l focus right
 bindsym $mod+Shift+L move right
 bindsym $mod+m layout stacking
 # move window to pool
-bindsym $mod+o move container to workspace $ws3
+bindsym $mod+o move container to workspace $ws4
 bindsym $mod+t layout toggle split
 bindsym $mod+u split v
 # to main
@@ -93,8 +93,9 @@ bindsym $mod+period exec rofi -show emoji  -theme $rofi_theme
 # start a terfloating togglefloating togglefloating togglefloating togglefloating toggleminal
 bindsym $mod+shift+Return exec i3-sensible-terminal
 
-bindcode --release 133 exec "rofi -show grabwin -modi 'grabwin:~/dotfiles/bin/grab_window.bash,run,drun' -show-icons -theme \\"$rofi_theme\\""
-bindcode --release 134 exec "rofi -show grabwin -modi 'grabwin:~/dotfiles/bin/grab_window.bash,run,drun' -show-icons -theme \\"$rofi_theme\\""
+
+bindcode --release 133 exec "rofi -show grabwin -modi 'grabwin:~/dotfiles/bin/grab_window.bash,run:~/dotfiles/bin/rofi_run.bash' -show-icons -theme \\"$rofi_theme\\""
+bindcode --release 134 exec "rofi -show grabwin -modi 'grabwin:~/dotfiles/bin/grab_window.bash,run:~/dotfiles/bin/rofi_run.bash' -show-icons -theme \\"$rofi_theme\\""
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status

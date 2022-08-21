@@ -18,7 +18,7 @@ configuration {
 	run-command: "/home/herman/dotfiles/bin/run_replace.bash {cmd}";
 /*	run-list-command: "";*/
 	run-shell-command: "{cmd}";
-    window-command: "wmctrl -i -R {window}";
+    	window-command: "wmctrl -i -R {window}";
 /*	window-match-fields: "all";*/
 /*	icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
@@ -93,13 +93,15 @@ configuration {
 /*	kb-remove-to-sol: "Control+u";*/
 	kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
 	kb-accept-custom: "Control+Escape";
-	kb-accept-alt: "shift+Return";
+	kb-accept-alt: "Control+Return";
 /*	kb-delete-entry: "Shift+Delete";*/
-	kb-mode-next: "Shift+Right,shift+Tab,MouseBack";
+	kb-mode-next: "Shift+Right,ISO_Left_Tab,MouseBack";
 	kb-mode-previous: "Shift+Left,Tab,MouseForward";
+	kb-element-next: "";
+	kb-element-prev: "";
 /*	kb-row-left: "Control+Page_Up";*/
 /*	kb-row-right: "Control+Page_Down";*/
-/*	kb-row-up: "Up,Control+p,ISO_Left_Tab";*/
+	kb-row-up: "Up,Control+p";
 /*	kb-row-down: "Down,Control+n";*/
 	kb-row-tab: "";
 /*	kb-page-prev: "Page_Up";*/
@@ -112,7 +114,7 @@ configuration {
 /*	kb-toggle-case-sensitivity: "grave,dead_grave";*/
 /*	kb-toggle-sort: "Alt+grave";*/
 /*	kb-cancel: "Escape,Control+g,Control+bracketleft";*/
-	kb-custom-1: "Control+Return,MouseMiddle";
+	kb-custom-1: "Shift+Return,MouseMiddle";
 /*	kb-custom-2: "Alt+2";*/
 /*	kb-custom-3: "Alt+3";*/
 /*	kb-custom-4: "Alt+4";*/
@@ -131,16 +133,16 @@ configuration {
 /*	kb-custom-17: "Alt+ampersand";*/
 /*	kb-custom-18: "Alt+asterisk";*/
 /*	kb-custom-19: "Alt+parenleft";*/
-/*	kb-select-1: "Super+1";*/
-/*	kb-select-2: "Super+2";*/
-/*	kb-select-3: "Super+3";*/
-/*	kb-select-4: "Super+4";*/
-/*	kb-select-5: "Super+5";*/
-/*	kb-select-6: "Super+6";*/
-/*	kb-select-7: "Super+7";*/
-/*	kb-select-8: "Super+8";*/
-/*	kb-select-9: "Super+9";*/
-/*	kb-select-10: "Super+0";*/
+	kb-select-1: "";
+	kb-select-2: "";
+	kb-select-3: "";
+	kb-select-4: "";
+	kb-select-5: "";
+	kb-select-6: "";
+	kb-select-7: "";
+	kb-select-8: "";
+	kb-select-9: "";
+	kb-select-10: "";
 /*	ml-row-left: "ScrollLeft";*/
 /*	ml-row-right: "ScrollRight";*/
 	ml-row-up: "";
