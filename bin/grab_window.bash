@@ -5,9 +5,7 @@ if [ -n "$*" ]
 then
     case "$ROFI_RETV" in
         1)
-            new_workspace=$(wmctrl -l | sed -nEe "/${selected_window}/s/^[xa-f0-9]+ +([0-9]+).*/\1/p")
-            xdotool getwindowfocus set_desktop_for_window "$new_workspace"
-            wmctrl -i -R "$selected_window"
+            wmctrl -i -a "$selected_window"
             ;;
         10)
             wmctrl -i -R "$selected_window"
