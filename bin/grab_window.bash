@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -x
 selected_window="$ROFI_INFO"
 if [ -n "$*" ]
 then
@@ -10,8 +10,8 @@ then
         10)
             wmctrl -i -R "$selected_window"
             ;;
-        *)
-            wmctrl -a "$win"
+        11)
+            wmctrl -i -c "$selected_window"
             ;;
     esac
     exit 0

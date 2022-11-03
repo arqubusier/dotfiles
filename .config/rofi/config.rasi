@@ -93,7 +93,7 @@ configuration {
 /*	kb-remove-to-sol: "Control+u";*/
 	kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
 	kb-accept-custom: "Control+Escape";
-	kb-accept-alt: "Control+Return";
+	kb-accept-alt: "Control+Tab";
 /*	kb-delete-entry: "Shift+Delete";*/
 	kb-mode-next: "Shift+Right,ISO_Left_Tab,MouseBack";
 	kb-mode-previous: "Shift+Left,Tab,MouseForward";
@@ -114,8 +114,8 @@ configuration {
 /*	kb-toggle-case-sensitivity: "grave,dead_grave";*/
 /*	kb-toggle-sort: "Alt+grave";*/
 /*	kb-cancel: "Escape,Control+g,Control+bracketleft";*/
-	kb-custom-1: "Shift+Return,MouseMiddle";
-/*	kb-custom-2: "Alt+2";*/
+	kb-custom-1: "Shift+Return,MouseSecondary";
+	kb-custom-2: "Ctrl+Return,MouseMiddle";
 /*	kb-custom-3: "Alt+3";*/
 /*	kb-custom-4: "Alt+4";*/
 /*	kb-custom-5: "Alt+5";*/
@@ -147,7 +147,8 @@ configuration {
 /*	ml-row-right: "ScrollRight";*/
 	ml-row-up: "";
 	ml-row-down: "";
-	me-select-entry: "ScrollUp";
-	me-accept-custom: "MousePrimary";
-	me-accept-entry: "MouseSecondary";
+        hover-select: true;
+	me-select-entry: "";
+	me-accept-custom: "";
+	me-accept-entry: "MousePrimary";
 }

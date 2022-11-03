@@ -48,7 +48,8 @@ set $refresh_i3status killall -SIGUSR1 i3status
 set $mouse_mod Mod1
 floating_modifier $mouse_mod
 
-set $rofi_theme ~/.config/rofi/launchers/misc/kde_simplemenu.rasi
+#set $rofi_theme ~/.config/rofi/launchers/misc/kde_simplemenu.rasi
+set $rofi_theme gruvbox-light
 
 bindsym $mod+a focus parent
 bindsym $mod+b layout tabbed
@@ -67,7 +68,7 @@ bindsym $mod+l focus right
 bindsym $mod+Shift+L move right
 bindsym $mod+m layout stacking
 # move window to pool
-bindsym $mod+o move container to workspace $ws4
+bindsym $mod+o exec "~/dotfiles/bin/minimize_window.bash" 
 bindsym $mod+t layout toggle split
 bindsym $mod+u split v
 # to main
