@@ -49,7 +49,7 @@ set $mouse_mod Mod1
 floating_modifier $mouse_mod
 
 #set $rofi_theme ~/.config/rofi/launchers/misc/kde_simplemenu.rasi
-set $rofi_theme gruvbox-light
+set $rofi_theme launchpad
 
 bindsym $mod+a focus parent
 bindsym $mod+b layout tabbed

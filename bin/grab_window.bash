@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-set -x
 selected_window="$ROFI_INFO"
 if [ -n "$*" ]
 then
     case "$ROFI_RETV" in
         1)
             wmctrl -i -a "$selected_window"
+	    exit 0
             ;;
         10)
             wmctrl -i -R "$selected_window"
+	    exit 0
             ;;
         11)
             wmctrl -i -c "$selected_window"
             ;;
     esac
-    exit 0
 fi
 
 
