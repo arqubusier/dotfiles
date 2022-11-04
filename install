@@ -9,7 +9,7 @@ set -e
 
 olddir=~/dotfiles_old             # old dotfiles backup directory
 herbst=.config/herbstluftwm/autostart
-files=".vimrc .zshrc.d/zshrc .Xresources .tmux.conf .gdbinit .config/i3/config .config/rofi/config.rasi \
+files=".vimrc .zshrc.d/herman.zsh .Xresources .tmux.conf .gdbinit .config/i3/config .config/rofi/config.rasi \
        $herbst .config/keepmenu/config.ini"
 
 ##########
