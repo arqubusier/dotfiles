@@ -94,6 +94,8 @@ bindsym $mod+period exec rofi -show emoji  -theme $rofi_theme
 # start a terfloating togglefloating togglefloating togglefloating togglefloating toggleminal
 bindsym $mod+shift+Return exec i3-sensible-terminal
 
+bindsym $mod+z exec BROWSER=firefox rofi -show websearch -modi 'websearch:~/dotfiles/bin/rofi-surfraw' -theme $rofi_theme
+bindsym $mod+c exec pkill conky || conky
 
 bindcode --release 133 exec "rofi -show grabwin -modi 'grabwin:~/dotfiles/bin/grab_window.bash,run:~/dotfiles/bin/rofi_run.bash' -show-icons -theme \\"$rofi_theme\\""
 bindcode --release 134 exec "rofi -show grabwin -modi 'grabwin:~/dotfiles/bin/grab_window.bash,run:~/dotfiles/bin/rofi_run.bash' -show-icons -theme \\"$rofi_theme\\""

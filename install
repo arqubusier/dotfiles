@@ -43,5 +43,5 @@ backup_and_link ~/dotfiles ~ "$olddir" $files
 chmod +x ~/"$herbst"
 
 # utility scripts
-scripts="run_replace grab_window.bash grab_window_hlwm.bash"
+scripts="run_replace grab_window.bash grab_window_hlwm.bash rofi-surfraw"
 backup_and_link ~/dotfiles/bin ~/bin "$olddir" $scripts

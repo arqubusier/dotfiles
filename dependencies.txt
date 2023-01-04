@@ -4,3 +4,4 @@ xdotool
 wmctrl
 greenclip
 keepmenu
+surfraw
